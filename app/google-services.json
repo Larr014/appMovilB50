@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "833388763614",
+    "project_id": "appmovilb50",
+    "storage_bucket": "appmovilb50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833388763614:android:fb128187e4ad0c7941a54f",
+        "android_client_info": {
+          "package_name": "com.example.appmovilb50"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833388763614-tu8jgq9qr6nng7tphkltaohnjtfjd9lp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZDijo-10lBubWjV6rQ8D0MWbCaa6a8UM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833388763614-tu8jgq9qr6nng7tphkltaohnjtfjd9lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
