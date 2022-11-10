@@ -17,4 +17,9 @@ public class Alumno {
         this.apellido = apellido;
         this.edad = edad;
     }
+
+    @Override
+    public String toString() {
+        return "Nombre:" +this.nombre+" Apellido: "+this.apellido;
+    }
 }
