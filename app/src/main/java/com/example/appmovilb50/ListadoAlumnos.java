@@ -3,7 +3,10 @@ package com.example.appmovilb50;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
@@ -14,6 +17,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -53,6 +59,19 @@ public class ListadoAlumnos extends AppCompatActivity {
                 }
                 adaptadorAlumnos = new ArrayAdapter<Alumno>(getApplicationContext(), android.R.layout.simple_list_item_1,alumnos);
                 lvAlumnos.setAdapter(adaptadorAlumnos);
+                lvAlumnos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                        Alumno a = (Alumno) adapterView.getItemAtPosition(i);
+                        Intent intencion = new Intent(getApplicationContext(),ModificarEliminarAlumno.class);
+                        Gson gson = new Gson();
+                        String alumno = gson.toJson(a);
+                        intencion.putExtra("alumno",alumno);
+
+                        startActivity(intencion);
+                    }
+                });
             }
 
             @Override
