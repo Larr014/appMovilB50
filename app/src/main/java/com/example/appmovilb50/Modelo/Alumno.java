@@ -20,6 +20,12 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Nombre:" +this.nombre+" Apellido: "+this.apellido;
+        return "Alumno{" +
+                "key='" + key + '\'' +
+                ", rut='" + rut + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                '}';
     }
 }

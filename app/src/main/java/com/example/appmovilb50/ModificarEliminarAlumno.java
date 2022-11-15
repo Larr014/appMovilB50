@@ -26,8 +26,8 @@ public class ModificarEliminarAlumno extends AppCompatActivity {
         Bundle b = this.getIntent().getExtras();
         String alumnoString = b.getString("alumno");
         Gson gson = new Gson();
-        Alumno a = gson.fromJson(alumnoString,Alumno.class);
-
+        this.a = (Alumno) gson.fromJson(alumnoString,Alumno.class);
+        System.out.println(this.a.nombre);
     }
     public void cargarAlumno(){
         etRut = (EditText) findViewById(R.id.etRutModificar);
@@ -36,10 +36,11 @@ public class ModificarEliminarAlumno extends AppCompatActivity {
         etEdad = (EditText) findViewById(R.id.etEdadModificar);
         btnModificar = (Button) findViewById(R.id.btnModificar);
         btnEliminar = (Button) findViewById(R.id.btnEliminar);
-        etRut.setText(a.rut);
-        etNombre.setText(a.nombre);
-        etApellido.setText(a.apellido);
-        etEdad.setText(a.edad);
+        System.out.println("NOMBRE: "+this.a.nombre);
+        etRut.setText(this.a.rut);
+        etNombre.setText(this.a.nombre);
+        etApellido.setText(this.a.apellido);
+        etEdad.setText(""+this.a.edad);
 
     }
 }
